@@ -1,0 +1,83 @@
+/* Use @import directive to import fonts here */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #e5e9fa;
+    text-align: center;
+}
+.card {
+  display: block;
+  justify-content: center;
+  align-self: center;
+  margin: auto;
+  max-width: 800px;
+  height: 360px;
+  border-radius: 10px;
+  background: white;
+}
+.star-rate {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 40px;
+  border: none;
+}
+.star-rate input{
+  display: none;
+}
+.star-rate > .half:before{
+  content: '\f089';
+  cursor: pointer;
+  position: absolute;
+}
+.star-rate label{
+  transition: color 0.1s ease-in-out;
+  color: #ddd;
+  float: right;
+  cursor: pointer;
+}
+.star-rate input:checked ~ label,
+.star-rate:not(:checked) label:hover,
+.star-rate:not(:checked) label:hover ~ label{
+  color: #ffe234;
+}
+.star-rate input:checked + label:hover,
+.star-rate input:checked ~ label:hover,
+.star-rate label:hover ~ input:checked ~ label,
+.star-rate input:checked ~label:checked~label{
+  color: #ffd900;
+}
+.star-rate label:before{
+  content: '\f005';
+  font-family: FontAwesome;
+  margin: 5px;
+  font-size: 1.85rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.text {
+  font-size: 1.8rem;
+  padding-top: 30px;
+  margin: 0 10px 0 10px;
+}
+.thankyou{
+  color: red;
+}
+.btn{
+  color: black;
+  border: none;
+  border-radius: 10px;
+  background: #ffe234;
+  font-size: 1rem;
+  width: 200px;
+  height: 50px;
+}
+.textarea textarea{
+  outline: none;
+  resize: none;
+  font-size: 14px;
+  border: 1px solid #333;
+}
+input{
+  display: none;
+}
